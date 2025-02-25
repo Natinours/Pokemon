@@ -1,0 +1,20 @@
+{{define "Set"}}
+<!DOCTYPE html>
+<html lang="fr"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    {{range .Data}}
+        <p>{{.CardCount.Total}}</p>
+        <p>{{.ID}}</p>
+        <p>{{.Logo}}</p>
+        <p>{{.Name}}</p>
+        <p>{{.ReleaseDate}}</p>
+        <br>
+    {{end}}
+</body>
+</html>
+{{end}}

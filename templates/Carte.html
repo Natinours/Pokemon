@@ -1,0 +1,33 @@
+{{define "Carte"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte</title>
+</head>
+<body>
+    {{range .Data}}
+        <p>{{.Category}}</p>
+        <p>{{.ID}}</p>
+        <p>{{.Illustrator}}</p>
+        <p>{{.Image}}</p>
+        <p>{{.Name}}</p>
+        <p>{{.Rarity}}</p>
+        <p>{{.DexID}}</p>
+        <p>{{.Hp}}</p>
+        <p>{{.Types}}</p>
+        <p>{{.Stage}}</p>
+        <p>{{.Attacks}}</p>
+        <p>{{.Cost}}</p>
+        <p>{{.Effect}}</p>
+        <p>{{.Damage}}</p>
+        <p>{{.Weakness}}</p>
+        <p>{{.Type}}</p>
+        <p>{{.Value}}</p>
+        <p>{{.Retreat}}</p>
+        <br>
+    {{end}}
+</body>
+</html>
+{{end}}

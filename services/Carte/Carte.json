@@ -1,0 +1,42 @@
+{
+    "category": "Pokemon",
+    "id": "swsh1-1",
+    "illustrator": "PLANETA Igarashi",
+    "image": "https://assets.tcgdex.net/en/swsh/swsh1/1",
+    "name": "Celebi V",
+    "rarity": "Holo Rare V",
+
+    "dexId": [
+        251
+    ],
+    "hp": 180,
+    "types": [
+        "Grass"
+    ],
+    "stage": "Basic",
+    "attacks": [
+        {
+            "cost": [
+                "Grass"
+            ],
+            "name": "Find a Friend",
+            "effect": "Search your deck for up to 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck."
+        },
+        {
+            "cost": [
+                "Grass",
+                "Colorless"
+            ],
+            "name": "Line Force",
+            "effect": "This attack does 20 more damage for each of your Benched Pokémon.",
+            "damage": "50+"
+        }
+    ],
+    "weaknesses": [
+        {
+            "type": "Fire",
+            "value": "x2"
+        }
+    ],
+    "retreat": 1
+}

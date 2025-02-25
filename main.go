@@ -19,7 +19,7 @@ func main() {
 
 	// Route pour la page d'accueil
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/Carte", http.StatusSeeOther)
+		http.Redirect(w, r, "/Set", http.StatusSeeOther)
 	})
 
 	http.HandleFunc("/Set", func(w http.ResponseWriter, r *http.Request) {

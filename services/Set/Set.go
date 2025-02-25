@@ -20,7 +20,7 @@ func SetP() []Set {
 	result := []Set{}
 
 	for i := 1; i <= 10; i++ {
-		url := fmt.Sprintf("https://api.tcgdex.net/v2/en/sets/swsh%d", i)
+		url := fmt.Sprintf("https://api.tcgdex.net/v2/en/sets/swsh%d", i) ///img/swsh%d.png
 
 		req, errReq := http.NewRequest("GET", url, nil)
 		if errReq != nil {

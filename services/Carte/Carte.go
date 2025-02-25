@@ -67,30 +67,28 @@ func CarteP() []Carte {
 			req, errReq := http.NewRequest("GET", url, nil)
 			if errReq != nil {
 				fmt.Printf("Requête - Erreur lors de l'initialisation de la requête : %s\n", errReq.Error())
-				continue // On continue plutôt que de retourner pour récupérer le maximum de cartes
+				return []Carte{}
 			}
 
 			httpClient := &http.Client{}
 			res, errRes := httpClient.Do(req)
 			if errRes != nil {
 				fmt.Printf("Requête - Erreur lors de l'exécution de la requête : %s\n", errRes.Error())
-				continue
+				return []Carte{}
 			}
+			defer res.Body.Close()
 
 			if res.StatusCode != http.StatusOK {
 				fmt.Printf("Réponse - Erreur, code HTTP : %d, message : %s\n", res.StatusCode, res.Status)
-				continue
+				return []Carte{}
 			}
 
 			var decodeData Carte
 			errDecode := json.NewDecoder(res.Body).Decode(&decodeData)
-			res.Body.Close()
-
 			if errDecode != nil {
 				fmt.Printf("Decode - Erreur lors du décodage des données : %s\n", errDecode.Error())
-				continue
+				return []Carte{}
 			}
-
 			result = append(result, decodeData)
 		}
 	}
